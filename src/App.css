@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tab-navigation ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #00b7e6;
+  padding: 10px;
+  list-style-type: none;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tab-navigation ul li {
+  cursor: pointer;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.tab-navigation ul li:hover {
+  background-color: #0090b3;
+}
+
+.tab-navigation ul li.active {
+  background-color: #005f75;
+}
+
+.content-area {
+  margin-top: 20px;
+  min-height: 400px;
+}
+
+/* Estilos para cada aba */
+.tab-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.tab-content h1 {
+  color: #2c2c2c;
+}
+
+.header-nos-conheca {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-text h1 {
+  font-size: 36px;
+  color: #2c2c2c;
+}
+
+.header-subtitle {
+  background-color: #00b7e6;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-top: 10px;
   color: white;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-dog-image {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.circle-decorations {
+  position: relative;
+}
+
+.green-circle {
+  position: absolute;
+  top: -100px;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  background-color: #32c6a6;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.blue-circle {
+  position: absolute;
+  bottom: -80px;
+  right: 5%;
+  width: 150px;
+  height: 150px;
+  background-color: #00b7e6;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.cat-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.cat-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-text {
+  margin: 40px 0;
+  padding: 0 20px;
+  color: #2c2c2c;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.content-text p {
+  margin-bottom: 20px;
+}
+/* Estilos para a aba Adote com Amor */
+.header-adote-com-amor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-text h1 {
+  font-size: 36px;
+  color: #2c2c2c;
+}
+
+.header-subtitle {
+  background-color: #00b7e6;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-top: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.header-dog-image {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.main-adote-com-amor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pet-card {
+  width: 180px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.pet-card:hover {
+  transform: translateY(-10px);
+}
+
+.pet-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.pet-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.pet-info h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #2c2c2c;
+}
+
+.pet-info p {
+  font-size: 14px;
+  color: #555;
 }
